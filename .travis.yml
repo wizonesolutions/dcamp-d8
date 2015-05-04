@@ -36,7 +36,8 @@ install:
   - composer global require drush/drush:dev-master
 
 before_script:
-  - /bin/bash scripts/travis.sh
+  - /bin/bash ci/travis.sh
 
 script:
   - curl localhost
+  - curl localhost/test.php
