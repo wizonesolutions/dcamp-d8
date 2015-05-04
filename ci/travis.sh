@@ -16,3 +16,5 @@ echo "\$config_directories['staging'] = 'config/staging';" | sudo tee -a sites/d
 drush cim staging -y
 # Set the testing email interface as default mail interface.
 drush cset system.mail interface.default test_mail_collector -y
+# Disable honeypot time limit, since we are going to be a bot later.
+drush cset honeypot.settings time_limit 0 -y
